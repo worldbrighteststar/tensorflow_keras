@@ -2,7 +2,6 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from tensorflow.python.framework.auto_control_deps_utils import _input_index
 
 # 1. data
 x_train = np.array([1,2,3,4,5])
