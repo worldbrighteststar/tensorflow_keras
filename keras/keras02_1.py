@@ -12,14 +12,14 @@ y_test = np.array([6,7,8])
 #  model
 model = Sequential()
 model.add(Dense(5, input_dim=1))
-model.add(Dense(3))
 model.add(Dense(10))
-model.add(Dense(4))
+model.add(Dense(20))
+model.add(Dense(10))
 model.add(Dense(1))
 
 # compile and train
 model.compile(loss='mse', optimizer='adam')
-model.fit(x_train, y_train, batch_size=1, epochs=500)
+model.fit(x_train, y_train, batch_size=1, epochs=200)
 
 # evaluate, predict
 loss = model.evaluate(x_test, y_test, batch_size=1)
