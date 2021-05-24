@@ -1,9 +1,8 @@
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-import numpy as np
 from numpy import array
 
-# 1. data
+# 1. data : 수동 split
 x = array(range(1, 101))
 y = array(range(101, 201))
 
