@@ -9,7 +9,7 @@ y = np.array([1,2,4,3,5,5,7,9,8,11])
 
 # 2. model
 model = Sequential()
-model.add(Dense(10, input_shape=(1,)))
+model.add(Dense(10, input_shape=(1,))) # input_dim=1
 model.add(Dense(20))
 model.add(Dense(40))
 model.add(Dense(10))
@@ -30,3 +30,10 @@ import matplotlib.pyplot as plt
 plt.scatter(x, y) # 기존 데이터 양상
 plt.plot(x, y_pred, color='red') # 훈련 결과 weight
 plt.show()
+
+"""
+현재 진도 상황까지의 예측 성능 향상을 위한 방법들
+1. layer 구조
+2. epochs 
+3. batch_size
+"""
