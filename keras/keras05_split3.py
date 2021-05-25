@@ -7,8 +7,8 @@ y = array(range(101, 201))
 
 from sklearn.model_selection import train_test_split
 
-x_train, x_test, y_train, y_test = train_test_split( # train, test split
-    x, y, train_size=0.9, shuffle=True # shuffle : default is True
+x_train, x_test, y_train, y_test = train_test_split(
+    x, y, train_size=0.9
 )
 
 print(f'train set : {x_train.shape}')
@@ -25,13 +25,10 @@ model.add(Dense(1))
 # 3. complie and train
 model.compile(loss='mse', optimizer='adam')
 model.fit(x_train, y_train, epochs=200, batch_size = 10, 
-        validation_split=0.2) 
+        validation_split=0.2) # sklearn으로 두번 split 할 필요 X
 
 # 4. evaluate and predict
 loss = model.evaluate(x_test, y_test)
 print(f'loss : {loss}')
 y_pred = model.predict([101,102,103])
 print(f'prediction : {y_pred}')
-
-"""
-"""
