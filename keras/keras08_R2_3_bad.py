@@ -1,3 +1,10 @@
+# R2를 음수가 아닌 0.5 이하로 만들기
+# 1. layer 6개 이상
+# 2. batch_size=1
+# 3. epochs=100 이상
+# 4. Hidden layer 노드 범위 (10, 1000)
+# 5. 데이터 조작 X
+
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -12,14 +19,15 @@ y_test = np.array([11,12,13,14,15])
 # 2. model
 model = Sequential()
 model.add(Dense(10, input_dim=1, activation='relu')) # input_shape=(2,)
-model.add(Dense(40))
-model.add(Dense(80))
+model.add(Dense(10))
+model.add(Dense(10))
+model.add(Dense(10))
 model.add(Dense(10))
 model.add(Dense(1))
 
 # 3. complie and train
 model.compile(loss='mse', optimizer='adam')
-model.fit(x_train, y_train, epochs=200, batch_size = 1)
+model.fit(x_train, y_train, epochs=100, batch_size=1)
 
 # 4. evaluate and predict
 loss = model.evaluate(x_test, y_test)

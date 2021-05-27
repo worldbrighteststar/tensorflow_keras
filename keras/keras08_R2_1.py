@@ -40,3 +40,7 @@ from sklearn.metrics import r2_score
 R2 = r2_score(y, y_pred)
 print(f'R2   : {R2}')
 print(f'Acc  : {results[1]}')
+
+"""
+회귀 모델에서의 Acc는 R2로.
+"""
