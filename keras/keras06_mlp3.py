@@ -1,6 +1,7 @@
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
+from tensorflow.python.ops.gen_dataset_ops import optimize_dataset
 
 # 1. data
 x = np.array([[100,85,70],[90,85,100],
@@ -17,6 +18,9 @@ model.add(Dense(20))
 model.add(Dense(1))
 
 # 3. compile and train
+# model.compile(loss='mse', optimizer='adam', metrics=['mae'])
+# model.compile(loss='mse', optimizer='adam', metrics=['accuracy'])
+# model.compile(loss='mse', optimizer='adam', metrics=['acc'])
 model.compile(loss='mse', 
               optimizer='adam', 
               metrics=['mae', 'acc']) # metrics : 번외로 다른 지표를 훈련 동안 볼 수 있음
