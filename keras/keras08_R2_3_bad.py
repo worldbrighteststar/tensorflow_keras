@@ -18,16 +18,16 @@ y_test = np.array([11,12,13,14,15])
 
 # 2. model
 model = Sequential()
-model.add(Dense(10, input_dim=1, activation='relu')) # input_shape=(2,)
-model.add(Dense(10))
-model.add(Dense(10))
-model.add(Dense(10))
-model.add(Dense(10))
+model.add(Dense(10, input_dim=1, activation='softmax'))
+model.add(Dense(40))
+model.add(Dense(80))
+model.add(Dense(40))
+model.add(Dense(20))
 model.add(Dense(1))
 
 # 3. complie and train
 model.compile(loss='mse', optimizer='adam')
-model.fit(x_train, y_train, epochs=100, batch_size=1)
+model.fit(x_train, y_train, epochs=200, batch_size=1)
 
 # 4. evaluate and predict
 loss = model.evaluate(x_test, y_test)

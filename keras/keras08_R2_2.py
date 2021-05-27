@@ -11,7 +11,7 @@ y_test = np.array([11,12,13,14,15])
 
 # 2. model
 model = Sequential()
-model.add(Dense(10, input_dim=1, activation='relu')) # input_shape=(2,)
+model.add(Dense(10, input_dim=1, activation='relu'))
 model.add(Dense(40))
 model.add(Dense(80))
 model.add(Dense(10))

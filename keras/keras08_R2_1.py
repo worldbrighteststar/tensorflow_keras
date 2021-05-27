@@ -11,7 +11,7 @@ x = np.transpose(x)
 
 # 2. model
 model = Sequential()
-model.add(Dense(10, input_dim=2, activation='relu')) # input_shape=(2,)
+model.add(Dense(10, input_dim=2, activation='relu'))
 model.add(Dense(40))
 model.add(Dense(80))
 model.add(Dense(10))
