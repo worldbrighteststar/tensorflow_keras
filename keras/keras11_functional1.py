@@ -1,4 +1,3 @@
-# 함수형 모델
 import numpy as np
 
 # 1. data
