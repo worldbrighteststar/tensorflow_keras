@@ -4,6 +4,7 @@
 # 3. epochs=100 이상
 # 4. Hidden layer 노드 범위 (10, 1000)
 # 5. 데이터 조작 X
+# answer : 잘못된 activation function 또는 loss function 사용시 성능 확연히 감소.
 
 import numpy as np
 from tensorflow.keras.models import Sequential
