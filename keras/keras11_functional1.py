@@ -56,5 +56,3 @@ print(f'RMSE : {RMSE(y_test, y_pred)}')
 from sklearn.metrics import r2_score
 R2 = r2_score(y_test, y_pred)
 print(f'R2   : {R2}')
-
-
