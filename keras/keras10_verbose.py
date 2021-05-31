@@ -7,8 +7,8 @@ x = np.array([range(100), range(301, 401), range(1, 101), range(101, 201), range
 y = np.array([range(1, 101), range(201, 301)])
 x = np.transpose(x)
 y = np.transpose(y)
-print(x.shape) # (100, 3)
-print(y.shape) # (100, 3)
+print(x.shape) # (100, 5)
+print(y.shape) # (100, 2)
 
 from sklearn.model_selection import train_test_split
 
