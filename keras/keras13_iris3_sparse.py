@@ -45,7 +45,7 @@ model.fit(x_train, y_train, epochs=200, verbose=2, validation_split=0.2)
 
 # 4. evaluate and predict
 results = model.evaluate(x_test, y_test)
-print(f'loss(mse) : {results[0]}')
+print(f'loss : {results[0]}')
 print(f'acc : {results[1]}')
 
 y_pred = model.predict(x_test)
