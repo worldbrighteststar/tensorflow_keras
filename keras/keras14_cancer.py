@@ -23,10 +23,10 @@ model.add(Dense(128, input_shape=(30,), activation='relu'))
 model.add(Dense(64))
 model.add(Dense(32))
 model.add(Dense(16))
-model.add(Dense(1, activation='sigmoid')) # 이진 분류 모델 활성 함수는 <sigmoid>
+model.add(Dense(1, activation='sigmoid')) # 이진 분류 모델 one-hot-encoding 필요 X(즉 output dim = 1), 활성 함수는 <sigmoid>
 
 # 3. compile and train
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc'])
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['acc']) # 이진 분류 모델 loss는 binary_crossentropy
 model.fit(x_train, y_train, epochs=200, validation_split=0.2)
 
 # 4. evaluate and predict
