@@ -39,7 +39,7 @@ model.add(Dense(3, activation='softmax'))
 """
 
 # 3. complie and train
-model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['acc']) # 다중 분류 모델 loss는 crossentropy 계열, ex:sparse_categorical_crossentropy
+model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['acc']) # 다중 분류 모델 loss는 categorical_crossentropy 계열
 model.fit(x_train, y_train, epochs=200, verbose=1, validation_split=0.2)
 
 # 4. evaluate and predict
