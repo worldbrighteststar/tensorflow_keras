@@ -32,7 +32,7 @@ xx = Dense(128, activation='relu')(input1)
 xx = Dense(64)(xx)
 xx = Dense(32)(xx)
 xx = Dense(16)(xx)
-output1 = Dense(3, activation='softmax')(xx) # 다중 분류 모델 output layer의 node는 <label 개수>, 활성 함수는 <softmax>
+output1 = Dense(3, activation='softmax')(xx) # 다중 분류 모델 output layer의 node는 one-hot-encoding 차원 = <label 개수>, 활성 함수는 <softmax>
 model = Model(inputs=input1, outputs=output1)
 """
 model = Sequential()
