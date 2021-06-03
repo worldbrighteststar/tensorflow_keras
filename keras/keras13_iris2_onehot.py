@@ -44,7 +44,7 @@ model.add(Dense(3, activation='softmax'))
 """
 
 # 3. complie and train
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc']) # 다중 분류 모델 loss는 crossentropy 계열
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc']) # categorical_crossentropy : one-hot-encoding 전처리 필요
 model.fit(x_train, y_train, epochs=200, verbose=2, validation_split=0.2)
 
 # 4. evaluate and predict
