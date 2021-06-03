@@ -7,8 +7,8 @@ from sklearn.datasets import load_iris
 dataset = load_iris()
 
 # sklearn datasets include (data, target, filename, feature_names, DESCR(description))
-x = dataset.data # 특징들
-y = dataset.target # 예측하고자 하는 목표값(label)
+x = dataset.data 
+y = dataset.target 
 
 print(x.shape, y.shape) # (150, 4) (150,)
 print(x[:5])
