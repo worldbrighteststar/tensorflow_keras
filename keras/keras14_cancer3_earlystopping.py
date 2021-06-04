@@ -31,9 +31,9 @@ model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=
 
 from tensorflow.keras.callbacks import EarlyStopping
 early_stopping = EarlyStopping(monitor='val_loss', patience=20, mode='auto') # monitor가 mode 방향과 반대로 patience만큼 가면 stop
-
+                                                                # mode = if loss : min or auto if acc : max or auto
 model.fit(x_train, y_train, epochs=1000, validation_split=0.2, 
-          callbacks=[early_stopping]) # 여기에 
+          callbacks=[early_stopping]) # 훈련에 적용하는 callbacks 관련 인자  
 
 # 4. evaluate and predict
 results = model.evaluate(x_test, y_test)
