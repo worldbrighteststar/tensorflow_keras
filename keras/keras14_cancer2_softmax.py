@@ -2,6 +2,7 @@ import numpy as np
 
 # 1. data
 from sklearn.datasets import load_breast_cancer
+from tensorflow.python.keras.callbacks import EarlyStopping
 dataset = load_breast_cancer()
 x = dataset.data 
 y = dataset.target 
@@ -23,10 +24,10 @@ model.add(Dense(128, input_shape=(30,), activation='relu'))
 model.add(Dense(64))
 model.add(Dense(32))
 model.add(Dense(16))
-model.add(Dense(2, activation='softmax')) # 이진 분류 모델 one-hot-encoding 필요 X(즉 output dim = 1), 활성 함수는 <sigmoid>
+model.add(Dense(2, activation='softmax')) # 이진 분류는 다중 분류에 포함되므로 다중 분류와 같은 setting 가능
 
 # 3. compile and train
-model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['acc']) # 이진 분류 모델 loss는 binary_crossentropy
+model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['acc']) # one-hot encoding(manually) + categorical_crossentropy 와 같다.
 model.fit(x_train, y_train, epochs=200, validation_split=0.2)
 
 # 4. evaluate and predict
