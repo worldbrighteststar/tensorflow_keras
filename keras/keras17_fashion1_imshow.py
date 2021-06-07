@@ -5,7 +5,7 @@ from tensorflow.keras.datasets import fashion_mnist
 print(x_train.shape, x_test.shape) # (60000, 28, 28) (10000, 28, 28)
 print(y_train.shape, y_test.shape) # (60000,) (10000,)
 """
-shape가 mnist와 같기 때문에 모델이 같아도 된다.
+shape가 mnist와 같기 때문에 모델이 같아도 된다. 
 """
 print(x_train[0])
 print(y_train[0])
