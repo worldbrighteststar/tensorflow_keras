@@ -2,7 +2,6 @@ import numpy as np
 
 # 1. data
 from sklearn.datasets import load_breast_cancer
-from tensorflow.python.keras.callbacks import EarlyStopping
 dataset = load_breast_cancer()
 x = dataset.data 
 y = dataset.target 
