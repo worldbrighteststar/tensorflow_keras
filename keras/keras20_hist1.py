@@ -44,7 +44,7 @@ print(f'actual y : {y_test}')
 print(f'prediction : {y_pred}')
 
 print(hist) # <tensorflow.python.keras.callbacks.History object xx>
-print(hist.history.keys()) # dict_keys(['loss', 'acc', 'val_loss', 'val_acc'])
+print(hist.history.keys()) # dict_keys(['loss', 'acc', 'val_loss', 'val_acc']) 
 # print(hist.history['loss'])
 print(hist.history['val_loss'])
 
