@@ -37,7 +37,7 @@ model.save('./keras/model/k23_1_model_1.h5') # compile 이전에 저장
 # 3. compile and train
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['acc']) 
 
-model.save('./keras/model/k23_1_model_2.h5') # train 이전에 저장
+model.save('./keras/model/k23_1_model_2.h5') # compile 이후 train 이전에 저장
 
 model.fit(x_train, y_train, epochs=10, validation_split=0.2)
 
