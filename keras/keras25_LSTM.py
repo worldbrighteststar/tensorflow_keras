@@ -16,7 +16,7 @@ from tensorflow.keras.layers import Dense, LSTM
 """
 Dense : (N, col)
 Conv2D : (N, width, height, channel)
-LSTM : (N, col, 몇개씩 자르는지)
+LSTM : (N, time step, col)
 """
 model = Sequential()
 model.add(LSTM(10, input_shape=(3,1)))
