@@ -17,8 +17,6 @@ from tensorflow.keras.layers import Conv1D, Dense, Flatten
 
 model = Sequential()
 
-# model.add(LSTM(32, activation='relu', input_shape=(28,28)))
-
 model.add(Conv1D(filters=30, kernel_size=2, strides=1,
                  padding='same', input_shape=(28,28))) 
 model.add(Flatten())
@@ -34,4 +32,4 @@ model.fit(x_train, y_train, epochs=10, validation_split=0.2)
 # 4. evaluate and predict
 results = model.evaluate(x_test, y_test)
 print(f'loss : {results[0]}')
-print(f'acc  : {results[1]}')
+print(f'acc  : {results[1]}') 
